@@ -108,6 +108,10 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
+        arguments: [],
+        dataUrl: "Build/output.data.unityweb",
+        workerUrl: "Build/output.data.unityweb",
+        frameworkUrl: "Build/output.framework.js.unityweb",
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
