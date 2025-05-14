@@ -55,9 +55,9 @@
       var loaderUrl = buildUrl + "/ProjectCrowd.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/ProjectCrowd.data.unityweb",
-        frameworkUrl: buildUrl + "/ProjectCrowd.framework.js.unityweb",
-        codeUrl: buildUrl + "/ProjectCrowd.wasm.unityweb",
+        dataUrl: buildUrl + "/ProjectCrowd.data",
+        frameworkUrl: buildUrl + "/ProjectCrowd.framework.js",
+        codeUrl: buildUrl + "/ProjectCrowd.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "ProjectCrowd",
@@ -108,10 +108,6 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-        arguments: [],
-        dataUrl: "Build/output.data.unityweb",
-        workerUrl: "Build/output.data.unityweb",
-        frameworkUrl: "Build/output.framework.js.unityweb",
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
